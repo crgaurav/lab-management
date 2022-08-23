@@ -32,25 +32,11 @@ export const crpHeader = [
 ];
 export const crpData = [
   {
-    investigation: "Result",
+    investigation: "C-Reactive Protein",
     unit: "mg/1",
     minValue: 0,
     maxValue: 6,
-    varName: "result",
-  },
-  {
-    investigation: "SGPT",
-    unit: "IU/L",
-    minValue: 0,
-    maxValue: 40,
-    varName: "sgpt",
-  },
-  {
-    investigation: "SR Creatinine",
-    unit: "mg/dl",
-    minValue: 0.4,
-    maxValue: 1.4,
-    varName: "srcratinine",
+    varName: "crp",
   },
 ];
 

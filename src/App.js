@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import CbcPage from "./pages/CbcPage";
 import EsrPage from "./pages/EsrPage";
 import CrpPage from "./pages/CrpPage";
+import LiverProfilePage from "./pages/LiverProfilePage";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="cbc" element={<CbcPage />} />
           <Route path="esr" element={<EsrPage />} />
           <Route path="crp" element={<CrpPage />} />
+          <Route path="liver" element={<LiverProfilePage />} />
         </Routes>
         <Link to="/">Home</Link>
         <br />
@@ -23,6 +25,8 @@ function App() {
         <Link to="esr">ESR</Link>
         <br />
         <Link to="crp">CRP</Link>
+        <br />
+        <Link to="liver">LiverProfile</Link>
       </div>
     </>
   );

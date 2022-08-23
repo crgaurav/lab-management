@@ -7,8 +7,12 @@ import reportGen from "../helpers/reports/reportGen";
 import formatedDate from "../helpers/formatedDate";
 import LabForm from "../components/LabForm";
 import UserDetailsForm from "../components/UserDetailsForm";
-import { crpHeader, crpData, notesDataCrp } from "../constant/reports/crp";
-function EsrPage() {
+import {
+  liverDataHeader,
+  liverData,
+  notesDataLiver,
+} from "../constant/reports/liverfunctiontest";
+function LiverProfilePage() {
   const [values, setValues] = React.useState({
     cbcParams: {},
     patient: {},
@@ -44,7 +48,7 @@ function EsrPage() {
         }}
       >
         <Typography variant="h4" gutterBottom>
-          CRP - Report
+          Liver Profile - Report
         </Typography>
         <Card variant="outlined">
           <Typography variant="h5" component="div">
@@ -54,9 +58,13 @@ function EsrPage() {
         </Card>
         <Card variant="outlined">
           <Typography variant="h5" component="div">
-            CRP Details
+            Liver Profile Details
           </Typography>
-          <LabForm values={values} handleChange={handleChange} data={crpData} />
+          <LabForm
+            values={values}
+            handleChange={handleChange}
+            data={liverData}
+          />
         </Card>
         <Button
           onClick={() => {
@@ -65,9 +73,9 @@ function EsrPage() {
               patient: values.patient,
               reportDate: formatedDate,
               values: values.cbcParams,
-              data: crpData,
-              header: crpHeader,
-              notes: notesDataCrp,
+              data: liverData,
+              header: liverDataHeader,
+              notes: notesDataLiver,
             });
           }}
         >
@@ -78,4 +86,4 @@ function EsrPage() {
   );
 }
 
-export default EsrPage;
+export default LiverProfilePage;
