@@ -1,23 +1,24 @@
-import {
-  business,
-  logo,
-  cbcData,
-  cbcHeader,
-  stampData,
-  notesData,
-} from "../../constant/business";
+import { business, logo, stampData } from "../../constant/business";
 import jsPDFInvoiceTemplate, { OutputType } from "jspdf-invoice-template";
 import formatedDate from "../formatedDate";
-function cbcReport({ filename, patient, reportDate, cbcValue }) {
+function reportGen({
+  filename,
+  patient,
+  reportDate,
+  data,
+  header,
+  values,
+  notes,
+}) {
   const tableData = [];
   let count = 1;
-  for (let i in cbcData) {
+  for (let i in data) {
     let tr = [
       `${count}`,
-      `${cbcData[i].investigation}`,
-      `${cbcValue[cbcData[i].varName]}`,
-      `${cbcData[i].unit}`,
-      `${cbcData[i].minValue}-${cbcData[i].maxValue}`,
+      `${data[i].investigation}`,
+      `${values[data[i].varName]}`,
+      `${data[i].unit}`,
+      `${data[i].minValue}-${data[i].maxValue}`,
     ];
     tableData.push(tr);
     count += 1;
@@ -53,9 +54,9 @@ function cbcReport({ filename, patient, reportDate, cbcValue }) {
       invGenDate: `Report Generated Date: ${formatedDate}`,
       headerBorder: false,
       tableBodyBorder: false,
-      header: cbcHeader,
+      header,
       table: tableData,
-      ...notesData,
+      ...notes,
     },
     footer: {
       text: "Not applicable for medical purpose.",
@@ -66,4 +67,4 @@ function cbcReport({ filename, patient, reportDate, cbcValue }) {
   jsPDFInvoiceTemplate(props);
 }
 
-export default cbcReport;
+export default reportGen;
