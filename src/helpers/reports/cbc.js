@@ -7,15 +7,15 @@ import {
   notesData,
 } from "../../constant/business";
 import jsPDFInvoiceTemplate, { OutputType } from "jspdf-invoice-template";
-
-function cbcReport({ filename, patient, reportDate }) {
+import formatedDate from "../formatedDate";
+function cbcReport({ filename, patient, reportDate, cbcValue }) {
   const tableData = [];
   let count = 1;
   for (let i in cbcData) {
     let tr = [
       `${count}`,
       `${cbcData[i].investigation}`,
-      `${cbcData[i].observedValue}`,
+      `${cbcValue[cbcData[i].varName]}`,
       `${cbcData[i].unit}`,
       `${cbcData[i].minValue}-${cbcData[i].maxValue}`,
     ];
@@ -49,8 +49,8 @@ function cbcReport({ filename, patient, reportDate }) {
     invoice: {
       label: "Report: ",
       num: 19,
-      invDate: `Report Date: ${reportDate}`,
-      invGenDate: `Report Generated Date: ${new Date()}`,
+      invDate: `Sample Date: ${reportDate}`,
+      invGenDate: `Report Generated Date: ${formatedDate}`,
       headerBorder: false,
       tableBodyBorder: false,
       header: cbcHeader,
