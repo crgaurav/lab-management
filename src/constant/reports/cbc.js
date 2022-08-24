@@ -187,7 +187,7 @@ export const cbcData = [
 ];
 
 export const notesDataCbc = {
-  invDescLabel: "Note",
+  invDescLabel: "Comment",
   invDesc:
-    "CBC Notes There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+    "As per the recommendation of International council for Standardization in Hematology, the differential leucocyte counts are additionally being reported as absolute numbers of each cell in per unit volume of blood. Test conducted on EDTA whole blood.",
 };
