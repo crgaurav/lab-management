@@ -97,6 +97,6 @@ export const liverData = [
 ];
 
 export const notesDataLiver = {
-  invDescLabel: "",
+  invDescLabel: "Test",
   invDesc: "",
 };

@@ -11,7 +11,7 @@ function cbcReport({ filename, patient, reportDate }) {
     logo: logo,
     stamp: {
       inAllPages: true, //by default = false, just in the last page
-      src: "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/qr_code.jpg",
+      // src: "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/qr_code.jpg",
       type: "JPG", //optional, when src= data:uri (nodejs case)
       width: 20, //aspect ratio = width/height
       height: 20,

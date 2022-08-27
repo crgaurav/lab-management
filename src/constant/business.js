@@ -23,12 +23,17 @@ export const userFormData = [
   { name: `Phone Number`, varName: "phone", type: "text" },
   { name: `emailId`, varName: "email", type: "email" },
   { name: `Age`, varName: "otherInfo", type: "text" },
-  { name: `Ref By `, varName: "refbydr", type: "text" },
+  {
+    name: `Ref By `,
+    varName: "refbydr",
+    type: "text",
+    default: "Dr Saurav Kumar Sharma",
+  },
 ];
 
 export const stampData = {
   inAllPages: true, //by default = false, just in the last page
-  src: "https://raw.githubusercontent.com/edisonneza/jspdf-invoice-template/demo/images/qr_code.jpg",
+  src: "",
   type: "JPG", //optional, when src= data:uri (nodejs case)
   width: 20, //aspect ratio = width/height
   height: 20,

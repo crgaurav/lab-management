@@ -1,4 +1,4 @@
-export const crpHeader = [
+export const sgotHeader = [
   {
     title: "#",
     style: {
@@ -30,17 +30,17 @@ export const crpHeader = [
     },
   },
 ];
-export const crpData = [
+export const sgotData = [
   {
-    investigation: "C-Reactive Protein",
-    unit: "mg/l",
+    investigation: "SGOT",
+    unit: "µ/l",
     minValue: 0,
-    maxValue: 6,
-    varName: "crp",
+    maxValue: 40,
+    varName: "sgot",
   },
 ];
 
-export const notesDataCrp = {
+export const notesDataSgot = {
   invDescLabel: "Note",
   invDesc: "",
 };

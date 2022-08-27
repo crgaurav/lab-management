@@ -1,4 +1,4 @@
-export const crpHeader = [
+export const bilirubinHeader = [
   {
     title: "#",
     style: {
@@ -30,17 +30,17 @@ export const crpHeader = [
     },
   },
 ];
-export const crpData = [
+export const bilirubinData = [
   {
-    investigation: "C-Reactive Protein",
-    unit: "mg/l",
+    investigation: "Bilirubin",
+    unit: "mg/dl",
     minValue: 0,
-    maxValue: 6,
-    varName: "crp",
+    maxValue: 1.3,
+    varName: "bilirubin",
   },
 ];
 
-export const notesDataCrp = {
+export const notesDataBilirubin = {
   invDescLabel: "Note",
   invDesc: "",
 };

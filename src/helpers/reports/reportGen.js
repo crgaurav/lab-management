@@ -1,5 +1,5 @@
 import { business, logo, stampData } from "../../constant/business";
-import jsPDFInvoiceTemplate, { OutputType } from "jspdf-invoice-template";
+import jsPDFInvoiceTemplate, { OutputType } from "./invoice-template";
 import formatedDate from "../formatedDate";
 function reportGen({
   filename,
@@ -49,7 +49,7 @@ function reportGen({
     },
     invoice: {
       label: `Ref By `,
-      num: `${patient.refbydr}`,
+      num: `${patient.refbydr || "Dr Saurav Kumar Sharma"}  `,
       invDate: "",
       invGenDate: ``,
       headerBorder: false,

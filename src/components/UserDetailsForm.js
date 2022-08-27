@@ -22,6 +22,7 @@ function UserDetailsForm({ handleChange, values }) {
             entity: "patient",
             varName: userParam.varName,
           })}
+          defaultValue={userParam.default}
           label={userParam.name}
         />
       </FormControl>
