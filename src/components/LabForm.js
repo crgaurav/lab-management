@@ -22,6 +22,7 @@ function LabForm({ handleChange, values, data: cbcData }) {
             entity: "cbcParams",
             varName: cbcParam.varName,
           })}
+          defaultValue={cbcParam.defaultValue}
           label={cbcParam.investigation}
           endAdornment={
             <InputAdornment position="end">{cbcParam.unit}</InputAdornment>

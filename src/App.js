@@ -8,6 +8,7 @@ import LiverProfilePage from "./pages/LiverProfilePage";
 import BilirubinPage from "./pages/BilirubinPage";
 import SgotPage from "./pages/SgotPage";
 import SgptPage from "./pages/SgptPage";
+import UrinePage from "./pages/UrinePage";
 import { Link } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="sgpt" element={<SgptPage />} />
           <Route path="sgot" element={<SgotPage />} />
           <Route path="billirubin" element={<BilirubinPage />} />
+          <Route path="urine" element={<UrinePage />} />
         </Routes>
         <Link to="/">Home</Link>
         <br />
@@ -39,6 +41,8 @@ function App() {
         <Link to="billirubin">Billirubin</Link>
         <br />
         <Link to="liver">LiverProfile</Link>
+        <br />
+        <Link to="urine">Urine </Link>
       </div>
     </>
   );

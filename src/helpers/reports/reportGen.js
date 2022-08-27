@@ -13,12 +13,17 @@ function reportGen({
   const tableData = [];
   let count = 1;
   for (let i in data) {
+    let bioData = `${data[i].minValue}`;
+    console.log(data[i].maxValue, undefined);
+    if (data[i].maxValue !== undefined) {
+      bioData = `${data[i].minValue}-${data[i].maxValue}`;
+    }
     let tr = [
       `${count}`,
       `${data[i].investigation}`,
-      `${values[data[i].varName]}`,
+      `${values[data[i].varName] || " "}`,
       `${data[i].unit}`,
-      `${data[i].minValue}-${data[i].maxValue}`,
+      `${bioData}`,
     ];
     tableData.push(tr);
     count += 1;
@@ -59,7 +64,7 @@ function reportGen({
       ...notes,
     },
     footer: {
-      text: "Not applicable for medical purpose.",
+      text: "Not valid for medico-Legal Purpose",
     },
     pageEnable: true,
     pageLabel: "Page ",
